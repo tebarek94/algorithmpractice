@@ -1,0 +1,160 @@
+/* ===================== style.css ===================== */
+
+:root {
+  --bg-dark: #0d1117;
+  --bg-card: #161b22;
+  --bg-hover: #238636;
+  --text-light: #fff;
+  --text-muted: #8b949e;
+  --btn-radius: 8px;
+  --card-radius: 12px;
+  --font-family: 'Inter', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-family);
+}
+
+body {
+  display: flex;
+  background: var(--bg-dark);
+  color: var(--text-light);
+  min-height: 100vh;
+}
+
+.sidebar {
+  width: 260px;
+  background: var(--bg-card);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 24px;
+  margin-right: 10px;
+}
+
+.title {
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.desc {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.nav-item {
+  padding: 10px;
+  border-radius: var(--btn-radius);
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.nav-item.active, .nav-item:hover {
+  background: var(--bg-hover);
+}
+
+.card {
+  background: var(--bg-card);
+  border-radius: var(--card-radius);
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+button.btn {
+  background: var(--bg-hover);
+  border: none;
+  color: var(--text-light);
+  padding: 8px 14px;
+  border-radius: var(--btn-radius);
+  cursor: pointer;
+  transition: transform 0.2s, background 0.2s;
+}
+
+button.btn:hover {
+  transform: scale(1.05);
+  background: #2ea043;
+}
+
+button.ghost {
+  background: transparent;
+  border: 1px solid var(--text-muted);
+  color: var(--text-light);
+}
+
+button.ghost:hover {
+  background: var(--bg-hover);
+  border-color: var(--bg-hover);
+}
+
+.main {
+  flex: 1;
+  padding: 30px;
+  overflow-y: auto;
+}
+
+header h1 {
+  font-size: 28px;
+  margin-bottom: 6px;
+}
+
+header .sub {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+}
+
+.row {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.row input, .row select {
+  flex: 1;
+  padding: 8px;
+  border-radius: var(--btn-radius);
+  border: 1px solid var(--text-muted);
+  background: var(--bg-dark);
+  color: var(--text-light);
+}
+
+.output {
+  margin-top: 12px;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.history {
+  margin-top: 12px;
+  font-size: 0.9rem;
+  max-height: 120px;
+  overflow-y: auto;
+  color: var(--text-muted);
+}
+
+.app-footer {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  text-align: center;
+  margin-top: 30px;
+}

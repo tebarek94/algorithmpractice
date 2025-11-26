@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Algorithm Practice — Full Project</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="logo">AP</div>
+        <div>
+          <div class="title">Algorithm Practice</div>
+          <p class="desc">
+            Interactive playground for practicing small JS algorithms.
+          </p>
+        </div>
+      </div>
+
+      <nav>
+        <div class="nav-item active" data-target="polygon">Polygon Angle</div>
+        <div class="nav-item" data-target="points">Basketball Points</div>
+        <div class="nav-item" data-target="age">Age to Days</div>
+        <div class="nav-item" data-target="remainder">Remainder</div>
+        <div class="nav-item" data-target="cube">Cube</div>
+        <div class="nav-item" data-target="lessthan">Less Than 100</div>
+        <div class="nav-item" data-target="counttrue">Count True</div>
+        <div class="nav-item" data-target="minmax">Min & Max</div>
+      </nav>
+
+      <div class="card">
+        <div
+          style="
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+          "
+        >
+          <div>
+            <strong>Quick Tips</strong>
+            <div style="font-size: 0.9rem; color: var(--muted)">
+              Try different inputs and view history.
+            </div>
+          </div>
+          <button id="resetAll" class="ghost">Reset</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <div
+          style="
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+          "
+        >
+          <div>
+            <strong>Examples</strong>
+            <div style="font-size: 0.9rem; color: var(--muted)">
+              Load examples into inputs
+            </div>
+          </div>
+          <button id="loadExamples" class="btn">Load</button>
+        </div>
+        <div class="history" id="examplesList" style="margin-top: 10px"></div>
+      </div>
+
+      <footer class="app-footer">
+        © 2025 — Built for practice • Try editing the code
+      </footer>
+    </aside>
+
+    <main class="main">
+      <header>
+        <div>
+          <h1 id="mainTitle">Polygon Angle</h1>
+          <div class="sub" id="mainSub">
+            Calculate the sum of interior angles of a polygon given its number
+            of sides.
+          </div>
+        </div>
+      </header>
+
+      <section id="content">
+        <!-- Single dynamic input layout for operations -->
+        <div class="card" id="dynamicCalc">
+          <h3>Dynamic Operation</h3>
+          <div class="row" style="margin-bottom: 8px">
+            <input id="numA" type="number" placeholder="Number A" />
+            <input id="numB" type="number" placeholder="Number B" />
+            <select id="operation">
+              <option value="sum">Sum</option>
+              <option value="subtract">Subtract</option>
+              <option value="multiply">Multiply</option>
+              <option value="divide">Divide</option>
+            </select>
+            <button class="btn" id="calcBtn">Calculate</button>
+          </div>
+          <div class="output" id="dynOut">Result will appear here</div>
+          <div class="history" id="dynHistory"></div>
+        </div>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
